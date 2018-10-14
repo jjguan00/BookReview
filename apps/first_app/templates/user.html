@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<a href="/main">Home</a>
+	<a href="/logOut">Log Out</a><br>
+	User: {{user.username}}<br>
+	Email: {{user.email}}<br>
+	Total Review: {{reviews.count}}<br>
+
+	<h4>Posted Review On the Following Book</h4><br>
+	{% for review in reviews%}
+		<a href="/books/{{review.book.id}}">{{review.book.title}}</a><br>
+	{% endfor %}
+</body>
+</html>
